@@ -8,9 +8,9 @@ Eco-Market описание
 
 ## Авторы
 
-* **Байшоланов Алибек** - ** - [Alishkoo](https://github.com/Alishkoo)
+* **Байшоланов Алибек** - [Alishkoo](https://github.com/Alishkoo)
 
-* **Атабай Нұркен** - *Инициальная работа* - [Nurkenproga](https://github.com/Nurkenproga)
+* **Атабай Нұркен** - [Nurkenproga](https://github.com/Nurkenproga)
 
 ## Благодарности
 
