@@ -40,9 +40,9 @@ class Order(models.Model):
     
     address = models.TextField()
     
-    reference_point = models.TextField()
+    reference_point = models.TextField(null=True, blank=True)
     
-    comments = models.TextField()
+    comments = models.TextField(null=True, blank=True)
     
     total_amount = models.FloatField()
     
