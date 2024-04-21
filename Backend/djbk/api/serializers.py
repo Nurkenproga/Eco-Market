@@ -53,13 +53,13 @@ class OrderSerializer(serializers.ModelSerializer):
     products = serializers.PrimaryKeyRelatedField(queryset=OrderItem.objects.all(), many=True)
     
     
-    def create(self, validated_data):
-        products = validated_data.pop('products')
-        order = Order.objects.create(**validated_data)
-        order.user = self.context['request'].user
-        for product in products:
-            order.products.add(product)
-        return order
+    # def create(self, validated_data):
+    #     products = validated_data.pop('products')
+    #     order = Order.objects.create(**validated_data)
+    #     order.user = self.context['request'].user
+    #     for product in products:
+    #         order.products.add(product)
+    #     return order
         
     
     class Meta:
