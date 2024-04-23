@@ -1,0 +1,33 @@
+.categories-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .category {
+    position: relative;
+    margin: 10px;
+  }
+  
+  .box-of-categories {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .Textview {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+    color: white; /* Change text color as needed */
+  }
+  
+.imageview img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 2px solid black; /* Add border to the image */
+    object-fit: contain; /* Fit the image within the border */
+    margin: 0 auto; /* Center the image horizontally */
+}  

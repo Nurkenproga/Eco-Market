@@ -1,1 +1,17 @@
-<p>category-list works!</p>
+<div class="categories-container">
+        <div *ngFor="let category of categories" class="category">
+
+            <a [title]= "category.name" [routerLink] =  "['/categories', category.id]">
+                <div class="box-of-categories">
+                    <div class="Textview">
+                        <h1>{{category.name}}</h1>
+                    </div>
+                <h2>
+                    <div class = "imageview">
+                        <img [src] = "category.image" [alt] = "category.name">
+                    </div>
+                </h2>
+                </div>
+            </a>
+        </div>
+</div>
