@@ -1,0 +1,21 @@
+
+a {
+     color: green;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.top-bar {
+    background-color: #4CAF50;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
