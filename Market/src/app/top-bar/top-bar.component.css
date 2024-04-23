@@ -1,21 +1,42 @@
-
-a {
-     color: green;
-    font-weight: bold;
+.logo a {
+    color: #4CAF50; /* Меняет цвет текста на зеленый */
     text-decoration: none;
+    
 }
 
 .top-bar {
-    background-color: #4CAF50;
+    background-color: white;
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
 }
 
 .logo {
     font-size: 24px;
-    color: white;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    color: #4CAF50;
+    font-family: 'TT Norms Pro';
+}
+
+.navigation ul {
+    display: flex;
+    gap: 10px;
+    list-style-type: none; /* Убирает маркеры списка */
+}
+
+.navigation ul li a {
+    color: #4CAF50;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    font-family: 'TT Norms Pro';
+    border-bottom: none; 
     text-decoration: none;
 }
