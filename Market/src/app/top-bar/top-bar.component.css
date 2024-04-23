@@ -1,22 +1,28 @@
 .logo a {
     color: #4CAF50; /* Меняет цвет текста на зеленый */
     text-decoration: none;
+    padding: 40px;
+    text-align: left;
+    position: absolute;
+    font-size: 50px;
+    left: 5px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     
 }
 
 .top-bar {
-    background-color: white;
+    background-color: #ffffc0;
     padding: 10px;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: right;
     border: 2px solid #4CAF50;
     border-radius: 10px;
 }
 
 .logo {
     font-size: 24px;
+    padding: 10px;
+    display: flex;
     font-weight: 700;
     line-height: 24px;
     text-align: left;
@@ -28,6 +34,7 @@
     display: flex;
     gap: 10px;
     list-style-type: none; /* Убирает маркеры списка */
+    justify-content: flex-end;
 }
 
 .navigation ul li a {
