@@ -1,75 +1,106 @@
+.container of container{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
 .search-container {
+    flex-direction: column; /* Change flex direction to column */
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 1rem 0;
   }
-  
-  .search-input {
+
+a{
+    outline: none;
+    text-decoration: none;
+    color:black;
+}
+  .Title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+.Title h1{
+    margin: 0 auto;
+    display: inline-block  ;
+    color: #45a049;
+    font-size: 100px;
+}
+
+.search-input {
     padding: 0.5rem;
     border: 1px solid #ccc;
-    border-right: none;
     border-radius: 3px 0 0 3px;
-    width: 100%;
-  }
+    width: 125%;
+    font-size: 16px; /* Added font size */
+    outline: none; /* Removed outline */
+    box-shadow: none; /* Removed box shadow */
+    transition: border-color 0.3s ease-in-out; /* Added transition effect */
+}
+
+.search-input:focus {
+    border-color: #4CAF50; /* Changed border color on focus */
+}
   
-  .search-button {
+.search-button {
     padding: 0.5rem;
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-left: 1px solid #ccc;
-    border-radius: 0 3px 3px 0;
+    border-radius: 5px 5px 5px 5px;
     cursor: pointer;
-  }
-  
-  .search-button:hover {
-    background-color: #45a049;
-  }
+    transition: background-color 0.3s ease-in-out; /* Added transition effect */
+    margin-top: 10px;
 
-
-.products{
-    width: 100%;
-    height: 140vh;
-    padding: 25px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 
-.products h1{
+.search-button:hover {
+    background-color: #45a049;
+}
+
+
+  .products {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 25px 0;
+    display:flex;
+    align-items: center; /* Center align items horizontally */
+  }
+.products h1 {
+    flex-direction: column; /* Change flex direction to column */
     margin: 35px 0;
     font-size: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center; /* Center align the text */
     text-transform: uppercase;
     background: #4CAF50;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;    
-}
+    -webkit-text-fill-color: transparent;
+  }
 
-.products .box{
-    width: 90%;
+.box {
+    flex-direction: row;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Changed the number of columns to 4 */
-    grid-gap: 25px 50px; /* Increased the horizontal gap between cards */
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-}
-
-.products .box .card{
-    width: 200px; /* Decreased the width of the card */
-    height: 340px; /* Decreased the height of the card */
+  }
+.box .card {
+    width: 300px; /* Adjusted width of the card */
+    height: auto; /* Removed fixed height */
+    margin: 0 10px 20px; /* Adjusted margin */
     box-shadow: 0 0 4px black;
     border: 2px solid green;
     border-radius: 5px;
     text-align: center;
     padding: 10px 20px;
     background: #f6f6f6;
-}
-
-.products .box .card .small_card{
+  }
+.box .card .small_card{
     display: flex;
     flex-flow: column;
     position: absolute;
@@ -79,34 +110,30 @@
     opacity: 0;
 }
 
-.products .box .card:hover .small_card{
+.box .card:hover .small_card{
     transform: translateX(2px);
     cursor: pointer;
     opacity: 1;
 }
 
-.products .box .card .image{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%; /* Added border-radius to make the image round */
-    border: 2px solid #999999; /* Added border to the image */
-    width: 150px; /* Added width to the image container */
-    height: 150px; /* Added height to the image container */
-    overflow: hidden; /* Added overflow to hide any overflowing content */
-    margin: 0 auto; /* Added margin: 0 auto; to center the image horizontally */
-}
-
-.products .box .card .image img{
-    width: 100%; /* Set the width of the image to 100% to fill the container */
-    height: 100%; /* Set the height of the image to 100% to fill the container */
-    object-fit: cover; /* Added object-fit to ensure the image fills the container without distortion */
+.card .image {
+    border-radius: 50%;
+    border: 2px solid #999999;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+.card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: 0.3s;
-}
-.products .box .card:hover .image img{
+  }
+.card:hover .image img{
     transform: scale(1.1);
 }
-.products .box .card .small_card i{
+.small_card i{
     width: 45px;
     height: 45px;
     border-radius: 5px;
@@ -117,29 +144,28 @@
     transition: 0.2s;
 }
 
-.products .box .card .small_card i:hover{
+.small_card i:hover{
     color: black;
 }
-
-.products .box .card .products_text{
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+.products_text {
     font-weight: lighter;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+    margin-top: 10px; /* Added margin top */
+  }
 
-.products .box .card .products_text .products_star{
+.products_star{
     color: orange;
     margin-bottom: 19px;
     cursor: pointer;
 }
 
-.products .box .card .products_text .btn{
-    text-decoration: none;
-    padding: 5px 10px; /* Decreased the padding */
-    background: linear-gradient(to right, #34b654 , #11d811);
+.btn {
+    padding: 10px 20px; /* Adjusted padding */
+    background: linear-gradient(to right, #34b654, #11d811);
     color: white;
-    border-radius: 80px; /* Added border-radius to make the button rounded */
-    font-weight: lighter; /* Added font-weight property to make the font softer */
-}
+    border-radius: 80px;
+    font-weight: lighter;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px; /* Added margin top */
+  }
