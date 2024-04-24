@@ -23,4 +23,8 @@ export class ProductsService {
   getOrderItems(): Observable<OrderItem[]>{
     return this.http.get<OrderItem[]>(`${this.BASE_URL}/api/order-item/`)
   }
+
+  getProductsId(id: number): Observable<Product[]>{
+    return this.http.get<Product[]>(`${this.BASE_URL}/api/product/${id}`)
+  }
 }
