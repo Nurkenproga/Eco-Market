@@ -8,6 +8,12 @@ export interface Product{
     price: string;
 }
 
+export interface OrderItem{
+    id: number;
+    product: number;
+    quantity: number;
+}
+
 export const Products: Product[] = [
     {
       "id": 1,

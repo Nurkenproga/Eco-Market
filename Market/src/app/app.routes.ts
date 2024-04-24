@@ -11,4 +11,5 @@ export const routes: Routes = [
     {path : 'products', component : ProductListComponent},
     {path : 'register', component : AuthComponent},
     {path: 'shopping', component: ShoppingCartComponent},
+    {path: 'products/:id', component: ProductListComponent}
 ];

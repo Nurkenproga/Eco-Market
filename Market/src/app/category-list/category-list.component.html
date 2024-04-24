@@ -1,6 +1,6 @@
 <div class="categories-container">
     <div *ngFor="let category of categories" class="category">
-      <a [title]="category.name" [routerLink]="['/categories', category.id]">
+      <a [title]="category.name" [routerLink]="['/products', category.id]">
         <div class="box-of-categories">
           <div class="imageview">
             <img [src]="category.image" [alt]="category.name">

@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
-import { Categories } from '../category';
+import { Component, OnInit, inject } from '@angular/core';
+import { Categories, Category } from '../category';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ProductsService } from '../products.service';
 
 @Component({
   selector: 'app-category-list',
@@ -11,7 +12,20 @@ import { RouterModule } from '@angular/router';
   styleUrl: './category-list.component.css'
   
 })
-export class CategoryListComponent {
+export class CategoryListComponent implements OnInit {
+  categoryService = inject(ProductsService);
 
-    categories = Categories;
+    categories: Category[] = [];
+
+  
+    ngOnInit(): void {
+      
+      this.getCategories()
+    }
+
+
+    getCategories(){
+      this.categoryService.getCategories().subscribe(categories => this.categories = categories);
+    }
+    
 }
