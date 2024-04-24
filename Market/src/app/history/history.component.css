@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.Title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+.Title h1{
+    margin: 0 auto;
+    display: inline-block  ;
+    color: #45a049;
+    font-size: 100px;
+}
