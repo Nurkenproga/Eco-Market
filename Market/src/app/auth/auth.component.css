@@ -10,12 +10,12 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: seagreen;
+    background: #EBE8E2;
 }
 
 .wrapper{
     width: 420px;
-    background: purple;
+    background: #ccc4b5;
     color:#fff;
     border-radius: 10px;
     padding: 30px 40px;
@@ -77,12 +77,3 @@
     
 }
 
-.register-link p a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.register-link p a:hover{
-    text-decoration: underline;
-}

@@ -4,9 +4,17 @@
     </div>
     
     <div class="for4ik" *ngFor="let item of history">
-        <h2>order_number<h2>
+        <h2>Order Number: {{ item.order_number }}</h2>
         <div class="box">
-            <>
+            <div class="info">
+                <h3>Products: {{ item.products }}</h3>
+                <h3>Address: {{ item.address }}</h3>
+                <h3>Comments: {{ item.comments }}</h3>
+            </div>
+            <div class="amount-right">
+            <h3 class="total-amount">Total Amount:<span class="amount">{{ item.total_amount }}</span></h3>
+            <h3 class="delivery-cost">Delivery Cost: {{ item.delivery_cost }}</h3>
+            </div>
         </div>
     </div>
 </div>
