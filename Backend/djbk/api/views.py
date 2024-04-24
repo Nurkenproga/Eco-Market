@@ -38,11 +38,12 @@ class ProductListView(APIView):
 class ProductView(APIView):
     def get(self, request, pk):
         try:
-            product = Product.objects.get(pk=pk)
+            product = Product.objects.filter(category=pk)
         except Product.DoesNotExist:
             return Response(status=status.HTTP_400_BAD_REQUEST)
-        serializer = ProductSerializer(product)
+        serializer = ProductSerializer(product, many=True)
         return Response(serializer.data)
+
 
 
 class OrderView(APIView):

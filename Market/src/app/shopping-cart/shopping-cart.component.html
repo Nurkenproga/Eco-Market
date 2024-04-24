@@ -1,4 +1,4 @@
-<!-- <div class="small-container cart-page">
+<div class="small-container cart-page">
     <table>
         <tr>
             <th>Product</th>
@@ -13,7 +13,7 @@
                         <img class="card-img" src="{{ order.product.image }}" alt="">
                     </div>
                     <div>
-                        <p>{{ order.product.title }}</p>
+                        <p>{{ order?.product?.title }}</p>
                         <small>Price: {{ order.product.price }} $</small>
                         <br>
                         <a href="#">Remove</a>
@@ -22,12 +22,12 @@
             </td>
             <td>
                 <button (click)="decreaseQuantity(order.product.id)">-</button>
-                    {{ quantity }}
+                    {{ order.product.quantity }}
                 <button (click)="increaseQuantity(order.product.id)">+</button>
                 
             </td>
             
-            <td>{{ quantity }} dollar</td>
+            <td>{{ order.product.price }} $</td>
         </tr>
     </table>
 </div>
@@ -36,7 +36,7 @@
     <table>
         <tr>
             <td>Total:</td>
-            <td>230 dollar</td>
+            <td>{{result}}</td>
         </tr>
     </table>
-</div> -->
+</div>
