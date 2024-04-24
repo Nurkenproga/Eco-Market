@@ -19,10 +19,16 @@ class ProductCategorySerializer(serializers.Serializer):
         instance.image = validated_data.get('image')
         instance.save()
         return instance
+  
+ 
+class ProductSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        fields = '__all__' 
     
     
 class OrderItemSerializer(serializers.Serializer):
-    product = serializers.PrimaryKeyRelatedField(queryset=Product.objects.all())
+    product = ProductSerializer()
     
     quantity = serializers.IntegerField()
     
@@ -41,12 +47,6 @@ class OrderItemSerializer(serializers.Serializer):
     def delete(self, instance):
         instance.delete()
         
-    
-    
-class ProductSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Product
-        fields = '__all__'
         
         
 class OrderSerializer(serializers.ModelSerializer):

@@ -17,8 +17,7 @@ import { inject } from '@angular/core';
 export class ShoppingCartComponent implements OnInit{
   orderItemService = inject(ProductsService);
 
-
-  products: Product[] = [];
+  result: number = 550;
 
   quantity: number = 1;
 
@@ -27,8 +26,7 @@ export class ShoppingCartComponent implements OnInit{
   constructor(){}
 
   ngOnInit() {
-    // this.getProducts();
-    // this.getOrderItems();
+    this.getOrderItems();
 
     
   }
@@ -47,10 +45,16 @@ export class ShoppingCartComponent implements OnInit{
     });
   }
 
-  getProducts(){
-    this.orderItemService.getProducts().subscribe(products => {
-      this.products = products;
-    });
+  deleteProducts(id: number){
+
   }
+
+
+
+  // getProducts(){
+  //   this.orderItemService.getProducts().subscribe(products => {
+  //     this.products = products;
+  //   });
+  // }
   
 }
