@@ -7,10 +7,10 @@ import { HistoryComponent } from './history/history.component';
 
 
 export const routes: Routes = [
-    {path : '', redirectTo : 'home', pathMatch : 'full'},
+    {path : '', redirectTo : 'login', pathMatch : 'full'},
     { path: 'home', component: CategoryListComponent },
     {path : 'products', component : ProductListComponent},
-    {path : 'register', component : AuthComponent},
+    {path : 'login', component : AuthComponent},
     {path: 'shopping', component: ShoppingCartComponent},
     {path: 'products/:id', component: ProductListComponent},
     {path: 'history' , component: HistoryComponent},
