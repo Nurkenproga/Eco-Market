@@ -14,6 +14,11 @@ export interface OrderItem{
     quantity: number;
 }
 
+export interface Token{
+  access: string;
+  refresh: string;
+}
+
 export const Products: Product[] = [
     {
       "id": 1,
