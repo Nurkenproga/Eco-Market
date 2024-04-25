@@ -1,26 +1,26 @@
-<div class="container of container">
+<div class="container">
     <div class="Title">
-        <h1>Products</h1>
-
-    <div class="search-container">
-        <input type="text" placeholder="Search.." class="search-input">
-        <button class="search-button">Search</button>
+      <h1>Products</h1>
+      <div class="search-container">
+        <input type="text" placeholder="Search.." class="search-input" [(ngModel)]="searchTerm">
+        <!-- Use (click) event binding to trigger searchProducts() method -->
+        <button class="search-button" (click)="searchProducts()">Search</button>
+      </div>
     </div>
-</div>
+  
     <div class="products" id="Products">
-
-    
-
-    <div class="box" *ngFor="let product of products">
+      <div class="box" *ngFor="let product of filteredProducts">
         <div class="card">
-            <div class="image">
-                <img [src]="product.image">
-            </div>
-            <div class="products_text">
-                <a href="#"><h2>{{ product.title}}</h2></a>
-                <h3>{{ product.price }} ₸</h3>
-                <a href="#" class="btn">Add To Cart</a>
-            </div>
+          <div class="image">
+            <img [src]="product.image">
+          </div>
+          <div class="products_text">
+            <a href="#"><h2>{{ product.title}}</h2></a>
+            <h3>{{ product.price }} ₸</h3>
+            <a href="#" class="btn">Add To Cart</a>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
+  
